@@ -44,8 +44,11 @@
 	<div id="blockly-editor"></div>
 </div>
 
-<style>
+<style lang="less">
+	@base: #f04615;
+
 	#blockly-editor {
+		background-color: @base;
 		width: 100%;
 		height: 100%;
 		display: block;

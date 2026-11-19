@@ -1,7 +1,10 @@
 <script lang="ts">
 	import * as Blockly from 'blockly';
-	import { BlocklyEditor, Toolbox, Plugins } from '#lib/blockly';
 	import { onMount } from 'svelte';
+
+	import WorkspaceContainer from '#lib/WorkspaceContainer.svelte';
+	import { BlocklyEditor, Toolbox, Plugins } from '#lib/blockly';
+	import { AppPanel, AppIcon, AppTypes } from '#lib/appBar';
 
 	let options = {
 		trashcan: true,
@@ -26,15 +29,35 @@
 		}
 	};
 
-	onMount(() => {
-		console.log(workspace);
+	// onMount(() => {
+	// 	console.log(workspace);
 
-		Blockly.serialization.workspaces.load(startBlocks, workspace);
-	});
+	// 	Blockly.serialization.workspaces.load(startBlocks, workspace);
+	// });
 </script>
 
-<h1>Welcome to SvelteKit</h1>
+<AppPanel>
+	<!-- <AppIcon ctx={AppTypes.Match}></AppIcon>
+	<AppIcon ctx={AppTypes.Substitution}></AppIcon>
+	<AppIcon ctx={AppTypes.Extraction}></AppIcon>
+	<div></div>
+	<AppIcon ctx={AppTypes.MyLibrary} needAuth></AppIcon>
+	<AppIcon ctx={AppTypes.Pipeline} needAuth></AppIcon>
 
-<BlocklyEditor {options} bind:codeOutput={message} bind:workspace></BlocklyEditor>
+	<AppIcon ctx={AppTypes.Account} needAuth></AppIcon> -->
+</AppPanel>
+
+<WorkspaceContainer>
+	<BlocklyEditor {options} bind:codeOutput={message} bind:workspace></BlocklyEditor>
+</WorkspaceContainer>
 
 <div>{message}</div>
+
+<style lang="less">
+	@import '#lib/Theme.less';
+	:global {
+		body {
+			background-color: @bg;
+		}
+	}
+</style>
