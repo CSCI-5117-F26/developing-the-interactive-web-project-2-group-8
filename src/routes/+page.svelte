@@ -30,11 +30,11 @@
 		}
 	};
 
-	// onMount(() => {
-	// 	console.log(workspace);
+	onMount(() => {
+		console.log(workspace);
 
-	// 	Blockly.serialization.workspaces.load(startBlocks, workspace);
-	// });
+		Blockly.serialization.workspaces.load(startBlocks, workspace);
+	});
 </script>
 
 <ToolPanel>
@@ -50,9 +50,11 @@
 
 <WorkspaceContainer>
 	<BlocklyEditor {options} bind:codeOutput={message} bind:workspace></BlocklyEditor>
+	<!-- <div style="background-color:red"></div> -->
+	<div style="background-color:blue"></div>
 </WorkspaceContainer>
 
-<div>{message}</div>
+<!-- <div>{message}</div> -->
 
 <style lang="less">
 	@import '#lib/Theme.less';

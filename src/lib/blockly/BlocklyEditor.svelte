@@ -55,8 +55,8 @@
 	}
 
 	.blockly-editor-container {
-		width: 800px;
-		height: 400px;
-		display: flex;
+		// width: 800px;
+		// height: 400px;
+		// display: flex;
 	}
 </style>

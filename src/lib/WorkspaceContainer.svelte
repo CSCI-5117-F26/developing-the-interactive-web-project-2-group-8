@@ -1,15 +1,27 @@
 <script lang="ts">
 	let { children } = $props();
 	let child = $state([]);
+	// console.log(children);
 </script>
 
-<div>
-	{#if child.length > 0}
+<div class="workspaceContainer">
+	<!-- {#if $$slots.length}
 		<p>First URL: {child[0]}</p>
-	{/if}
+	{/if} -->
+
+	<slot></slot>
 </div>
 
 <!-- <div aria-label="Resize navigation panel" aria-orientation="vertical" class="n4YC7 wKDUk" role="separator" tabindex="0"></div> -->
 
 <style lang="less">
+	@import './Theme.less';
+
+	.workspaceContainer {
+		display: flex;
+		flex-grow: 1;
+		:global(> *) {
+			flex-grow: inherit;
+		}
+	}
 </style>
