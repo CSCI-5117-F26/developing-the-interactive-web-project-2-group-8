@@ -36,6 +36,9 @@
 		"vite": "^8.3.0"
 	},
 	"dependencies": {
+		"@blockly/block-plus-minus": "^13.4.0",
+		"@blockly/plugin-scroll-options": "^13.4.0",
+		"@blockly/toolbox-search": "^13.4.0",
 		"blockly": "^13.4.0"
 	}
 }
