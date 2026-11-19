@@ -1,4 +1,4 @@
-export enum AppTypes {
+export enum ToolTypes {
   Match = "mtch",
   Substitution = "subs",
   Extraction = "extr",

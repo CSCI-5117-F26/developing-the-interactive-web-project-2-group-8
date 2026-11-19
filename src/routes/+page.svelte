@@ -4,7 +4,8 @@
 
 	import WorkspaceContainer from '#lib/WorkspaceContainer.svelte';
 	import { BlocklyEditor, Toolbox, Plugins } from '#lib/blockly';
-	import { AppPanel, AppIcon, AppTypes } from '#lib/appBar';
+	import { ToolPanel, ToolIcon, ToolTypes } from '#lib/toolBar';
+	import { Iconmtch, Iconsubs, Iconextr, Iconmylb, Iconpipl, Iconacct } from '#lib/toolBar';
 
 	let options = {
 		trashcan: true,
@@ -36,16 +37,16 @@
 	// });
 </script>
 
-<AppPanel>
-	<!-- <AppIcon ctx={AppTypes.Match}></AppIcon>
-	<AppIcon ctx={AppTypes.Substitution}></AppIcon>
-	<AppIcon ctx={AppTypes.Extraction}></AppIcon>
+<ToolPanel>
+	<ToolIcon ctx={ToolTypes.Match}><Iconmtch></Iconmtch></ToolIcon>
+	<ToolIcon ctx={ToolTypes.Substitution}><Iconsubs></Iconsubs></ToolIcon>
+	<ToolIcon ctx={ToolTypes.Extraction}><Iconextr></Iconextr></ToolIcon>
 	<div></div>
-	<AppIcon ctx={AppTypes.MyLibrary} needAuth></AppIcon>
-	<AppIcon ctx={AppTypes.Pipeline} needAuth></AppIcon>
+	<ToolIcon ctx={ToolTypes.MyLibrary} needAuth><Iconmylb></Iconmylb></ToolIcon>
+	<ToolIcon ctx={ToolTypes.Pipeline} needAuth><Iconpipl></Iconpipl></ToolIcon>
 
-	<AppIcon ctx={AppTypes.Account} needAuth></AppIcon> -->
-</AppPanel>
+	<ToolIcon ctx={ToolTypes.Account} needAuth><Iconacct></Iconacct></ToolIcon>
+</ToolPanel>
 
 <WorkspaceContainer>
 	<BlocklyEditor {options} bind:codeOutput={message} bind:workspace></BlocklyEditor>
@@ -56,8 +57,15 @@
 <style lang="less">
 	@import '#lib/Theme.less';
 	:global {
-		body {
+		#app {
+			display: flex;
+			height: 100vh;
+			width: 100vw;
 			background-color: @bg;
+		}
+		body {
+			margin: 0;
+			padding: none;
 		}
 	}
 </style>
