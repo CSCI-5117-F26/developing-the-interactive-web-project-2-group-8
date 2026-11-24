@@ -1,3 +1,4 @@
+import tailwindcss from '@tailwindcss/vite';
 import adapter from '@sveltejs/adapter-auto';
 import { sveltekit } from '@sveltejs/kit/vite';
 import { vitePreprocess } from '@sveltejs/vite-plugin-svelte';
@@ -5,25 +6,26 @@ import { defineConfig } from 'vite';
 
 export default defineConfig( {
 	build: {
-		sourcemap: true,
+		sourcemap: true
 	},
 	css: {
 		preprocessorOptions: {
 			less: {
-				math: "always",
+				math: 'always',
 				relativeUrls: true,
 				javascriptEnabled: true
-			},
-		},
+			}
+		}
 	},
 	plugins: [
+		tailwindcss(),
 		sveltekit( {
 			preprocess: vitePreprocess( {
-				style: true,      // default value
-				script: false     // default value
+				style: true, // default value
+				script: false // default value
 			} ),
 			compilerOptions: {
-				customElement: true,
+				// customElement: true,
 
 				// Force runes mode for the project, except for libraries. Can be removed in svelte 6.
 				runes: ( { filename } ) =>
