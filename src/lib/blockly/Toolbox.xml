@@ -1,5 +1,5 @@
 <xml id="toolbox" style="display: none">
-	<category name="Atoms" categorystyle="character_category">
+	<category name="Atoms" categorystyle="atom_category">
 		<block type="atom_literal"></block>
 		<block type="atom_capturing_group"></block>
 		<block type="atom_named_capturing_group"></block>

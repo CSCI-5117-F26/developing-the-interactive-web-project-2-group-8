@@ -17,7 +17,7 @@
 	.toolPanel {
 		height: 100%;
 		background-color: @bg-secondary;
-
+		border-right: 1px solid #22232d;
 		display: flex;
 		flex-direction: column;
 

@@ -1,6 +1,7 @@
 import BlocklyEditor from './BlocklyEditor.svelte';
 import "./Blocks";
 import "./BlockGenerator";
+import { TokyoNightTheme } from './Theme';
 
 import Toolbox from './Toolbox.xml?raw';
 import { pluginInfo as FlagConnectionChecker } from './FlagConnectionChecker';
@@ -12,4 +13,4 @@ const Plugins = {
   // toolbox: 'ContinuousToolbox'
 }
 
-export { BlocklyEditor, Toolbox, Plugins };
+export { TokyoNightTheme, BlocklyEditor, Toolbox, Plugins };

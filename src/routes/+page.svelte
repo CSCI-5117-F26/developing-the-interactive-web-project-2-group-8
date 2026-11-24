@@ -3,14 +3,15 @@
 	import { onMount } from 'svelte';
 
 	import WorkspaceContainer from '#lib/WorkspaceContainer.svelte';
-	import { BlocklyEditor, Toolbox, Plugins } from '#lib/blockly';
+	import { TokyoNightTheme, BlocklyEditor, Toolbox, Plugins } from '#lib/blockly';
 	import { ToolPanel, ToolIcon, ToolTypes } from '#lib/toolBar';
 	import { Iconmtch, Iconsubs, Iconextr, Iconmylb, Iconpipl, Iconacct } from '#lib/toolBar';
 
 	let options = {
 		trashcan: true,
 		toolbox: Toolbox,
-		plugins: Plugins
+		plugins: Plugins,
+		theme: TokyoNightTheme
 	};
 
 	let workspace: Blockly.WorkspaceSvg;

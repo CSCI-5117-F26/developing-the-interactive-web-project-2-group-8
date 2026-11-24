@@ -111,6 +111,7 @@ Blockly.Blocks[ "atom_capturing_group" ] = {
     this.setTooltip( 'A capturing group groups a subpattern, allowing you to apply a quantifier to the entire group or use disjunctions within it. It memorizes information about the subpattern match, so that you can refer back to it later with a backreference, or access the information through the match results' );
     this.setHelpUrl( '' );
     this.setColour( 225 );
+    this.setStyle( "atom" );
   }
 };
 
@@ -125,6 +126,7 @@ Blockly.Blocks[ "atom_named_capturing_group" ] = {
     this.setNextStatement( true, 'Atom' );
     this.setTooltip( 'A named capturing group is a particular kind of capturing group that allows you to give a name to the group. The group\'s matching result can later be identified by this name instead of by its index in the pattern' ); this.setHelpUrl( '' );
     this.setColour( 225 );
+    this.setStyle( "atom" );
   }
 };
 
@@ -139,6 +141,7 @@ Blockly.Blocks[ "atom_non_capturing_group" ] = {
     this.setNextStatement( true, 'Atom' );
     this.setTooltip( 'A non-capturing group groups a subpattern, allowing you to apply a quantifier to the entire group or use disjunctions within it. It acts like the grouping operator in JavaScript expressions, and unlike capturing groups, it does not memorize the matched text, allowing for better performance and avoiding confusion when the pattern also contains useful capturing groups' ); this.setHelpUrl( '' );
     this.setColour( 225 );
+    this.setStyle( "atom" );
   }
 };
 
@@ -152,6 +155,7 @@ Blockly.Blocks[ "atom_backreference" ] = {
     this.setTooltip( 'A backreference is a way to match the same text as previously matched by a capturing group' );
     this.setHelpUrl( '' );
     this.setColour( 225 );
+    this.setStyle( "atom" );
   }
 };
 
@@ -165,6 +169,8 @@ Blockly.Blocks[ "atom_named_backreference" ] = {
     this.setTooltip( 'A named backreference refers to the submatch of a previous named capturing group and matches the same text as that group' );
     this.setHelpUrl( '' );
     this.setColour( 225 );
+    this.setStyle( "atom" );
+
   }
 };
 
