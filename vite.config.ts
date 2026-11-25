@@ -2,6 +2,13 @@ import tailwindcss from '@tailwindcss/vite';
 // import adapter from '@sveltejs/adapter-auto';
 import adapter from '@sveltejs/adapter-static';
 
+
+import postcssNesting from 'postcss-nesting';
+import postcssEach from 'postcss-each';
+import postcssAtRulesVariables from 'postcss-at-rules-variables';
+import postcssCustomProperties from 'postcss-custom-properties';
+
+
 import { sveltekit } from '@sveltejs/kit/vite';
 import { vitePreprocess } from '@sveltejs/vite-plugin-svelte';
 import { defineConfig } from 'vite';
@@ -11,16 +18,34 @@ export default defineConfig( {
 		sourcemap: true
 	},
 	css: {
+		postcss: {
+			plugins: [
+				postcssNesting,
+				postcssEach( {
+					afterEach: [
+						postcssAtRulesVariables,
+
+					],
+					beforeEach: [
+						postcssCustomProperties,
+
+					]
+				} ),
+				tailwindcss
+			],
+		}
 	},
 	plugins: [
+		// require( '@tailwindcss/postcss' ), require( 'postcss-each' ),
 		tailwindcss(),
 		sveltekit( {
 			preprocess: vitePreprocess( {
 				style: true, // default value
-				script: false // default value
+				script: true // default value
 			} ),
 			compilerOptions: {
 				// customElement: true,
+
 
 				// Force runes mode for the project, except for libraries. Can be removed in svelte 6.
 				runes: ( { filename } ) =>

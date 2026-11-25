@@ -17,21 +17,23 @@
 	import type { Component } from 'svelte';
 	import SidebarGroup from './ui/sidebar/sidebar-group.svelte';
 	import { Header } from './ui/sheet';
+	import type { SidebarMenuButtonVariant } from './ui/sidebar/sidebar-menu-button.svelte';
 
 	type ITool = {
 		name: string;
 		url: string;
 		icon: LucideIcon;
+		color: SidebarMenuButtonVariant;
 	};
 	type ISeperator = 'seperator';
 	const tools: (ITool | ISeperator)[] = [
-		{ name: 'Match', url: 'match', icon: ScanSearch },
-		{ name: 'Substitution', url: 'substitution', icon: Replace },
-		{ name: 'Extraction', url: 'extraction', icon: Funnel },
-		{ name: 'Pipeline', url: 'pipeline', icon: Workflow },
+		{ name: 'Match', url: 'match', icon: ScanSearch, color: 'red' },
+		{ name: 'Substitution', url: 'substitution', icon: Replace, color: 'yellow' },
+		{ name: 'Extraction', url: 'extraction', icon: Funnel, color: 'green' },
+		{ name: 'Pipeline', url: 'pipeline', icon: Workflow, color: 'cyan' },
 		'seperator',
-		{ name: 'Explore', url: 'explore', icon: Telescope },
-		{ name: 'My Library', url: 'library', icon: Library }
+		{ name: 'Explore', url: 'explore', icon: Telescope, color: 'blue' },
+		{ name: 'My Library', url: 'library', icon: Library, color: 'magenta' }
 	];
 
 	// let currentUrl = window.location.pathname;
@@ -50,6 +52,7 @@
 					{:else}
 						<Sidebar.MenuItem>
 							<Sidebar.MenuButton
+								variant={tool.color}
 								// isActive={currentUrl.includes(tool.url)}
 								tooltipContent={tool.name}
 							>
@@ -57,7 +60,6 @@
 									{@const Icon = tool.icon}
 
 									<a href={tool.url} {...props}>
-										<!-- svelte-ignore svelte_component_deprecated -->
 										<Icon />
 										<span>{tool.name}</span>
 									</a>
@@ -82,3 +84,6 @@
 	</Sidebar.Footer>
 	<Sidebar.Rail />
 </Sidebar.Root>
+
+<style>
+</style>

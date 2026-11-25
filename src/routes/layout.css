@@ -3,6 +3,9 @@
 @import 'shadcn-svelte/tailwind.css';
 @import '@fontsource-variable/inter';
 
+/* this is for the App Indicator */
+@source inline('{data-closed,hover:,focus:,}bg-{red,yellow,green,cyan,blue,magenta}-{500,700}');
+
 @custom-variant dark (&:is(.dark *));
 
 :root {
@@ -116,6 +119,22 @@
 	--radius-4xl: calc(var(--radius) * 2.6);
 }
 
+@theme {
+	--color-red-500: #f7768e;
+	--color-yellow-500: #e0af68;
+	--color-green-500: #73daca;
+	--color-cyan-500: #7dcfff;
+	--color-blue-500: #7aa2f7;
+	--color-magenta-500: #bb9af7;
+
+	--color-red-700: #9b3346;
+	--color-yellow-700: #9e7230;
+	--color-green-700: #2b9e8d;
+	--color-cyan-700: #387aa0;
+	--color-blue-700: #3457a4;
+	--color-magenta-700: #402571;
+}
+
 @layer base {
 	* {
 		@apply border-border outline-ring/50;
@@ -127,3 +146,11 @@
 		@apply font-sans;
 	}
 }
+
+/* @layer components {
+	@each $color in red, yellow, green, cyan, blue, magenta {
+		.button-$(color) {
+			@apply bg-(--color-$(color)-500);
+		}
+	}
+} */
