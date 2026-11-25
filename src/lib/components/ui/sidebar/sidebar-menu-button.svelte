@@ -8,12 +8,15 @@
 				default: 'hover:bg-sidebar-accent hover:text-sidebar-accent-foreground',
 				outline:
 					'bg-background hover:bg-sidebar-accent hover:text-sidebar-accent-foreground shadow-[0_0_0_1px_var(--sidebar-border)] hover:shadow-[0_0_0_1px_var(--sidebar-accent)]',
-				red: 'bg-red-500 hover:bg-red-400 active:bg-red-700',
-				yellow: 'bg-yellow-500 hover:bg-yellow-400 active:bg-yellow-700',
-				green: 'bg-green-500 hover:bg-green-400 active:bg-green-700',
-				cyan: 'bg-cyan-500 hover:bg-cyan-400 active:bg-cyan-700',
-				blue: 'bg-blue-500 hover:bg-blue-400 active:bg-blue-700',
-				magenta: 'bg-magenta-500 hover:bg-magenta-400 active:bg-magenta-700'
+				red: 'bg-red-500 hover:bg-red-600 active:bg-red-400 stroke-red-400 active:stroke-red-500 text-red-400 hover:text-red-400 active:text-red-500',
+				yellow:
+					'bg-yellow-500 hover:bg-yellow-600 active:bg-yellow-400 stroke-yellow-400 active:stroke-yellow-500 text-yellow-400 hover:text-yellow-400 active:text-yellow-500',
+				green:
+					'bg-green-500 hover:bg-green-600 active:bg-green-400 stroke-green-400 active:stroke-green-500 text-green-400 hover:text-green-400 active:text-green-500',
+				cyan: 'bg-cyan-500 hover:bg-cyan-600 active:bg-cyan-400 stroke-cyan-400 active:stroke-cyan-500 text-cyan-400 hover:text-cyan-400 active:text-cyan-500',
+				blue: 'bg-blue-500 hover:bg-blue-600 active:bg-blue-400 stroke-blue-400 active:stroke-blue-500 text-blue-400 hover:text-blue-400 active:text-blue-500',
+				magenta:
+					'bg-magenta-500 hover:bg-magenta-600 active:bg-magenta-400  stroke-magenta-400 active:stroke-magenta-500 text-magenta-400 hover:text-magenta-400 active:text-magenta-500'
 			},
 			size: {
 				default: 'h-8 text-sm',

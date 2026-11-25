@@ -59,9 +59,9 @@
 								{#snippet child({ props })}
 									{@const Icon = tool.icon}
 
-									<a href={tool.url} {...props}>
-										<Icon />
-										<span>{tool.name}</span>
+									<a class="text-inherit" href={tool.url} {...props}>
+										<Icon class="stroke-inherit" />
+										<span class="text-inherit">{tool.name}</span>
 									</a>
 								{/snippet}
 							</Sidebar.MenuButton>
