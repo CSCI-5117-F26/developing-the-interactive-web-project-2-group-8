@@ -16,6 +16,7 @@
 	} from '@lucide/svelte';
 	import type { Component } from 'svelte';
 	import SidebarGroup from './ui/sidebar/sidebar-group.svelte';
+	import { Header } from './ui/sheet';
 
 	type ITool = {
 		name: string;
@@ -37,6 +38,8 @@
 </script>
 
 <Sidebar.Root collapsible="icon">
+	<!-- <Sidebar.Header> -->
+	<!-- </Sidebar.Header> -->
 	<Sidebar.Content>
 		<Sidebar.Group>
 			<!-- <Sidebar.GroupLabel>Application</Sidebar.GroupLabel> -->
@@ -77,4 +80,5 @@
 			</Sidebar.MenuItem>
 		</Sidebar.Menu>
 	</Sidebar.Footer>
+	<Sidebar.Rail />
 </Sidebar.Root>

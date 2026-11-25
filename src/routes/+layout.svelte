@@ -24,7 +24,12 @@
 <Sidebar.Provider open={false}>
 	<AppSidebar />
 	<main>
-		<Sidebar.Trigger />
 		{@render children?.()}
 	</main>
 </Sidebar.Provider>
+
+<style lang="less">
+	main {
+		flex-grow: 1;
+	}
+</style>
