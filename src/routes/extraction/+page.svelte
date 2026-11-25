@@ -22,5 +22,5 @@
 	</Resizable.Pane>
 </Resizable.PaneGroup>
 
-<style lang="less">
+<style>
 </style>

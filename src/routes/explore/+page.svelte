@@ -8,7 +8,7 @@
 			<span class="font-semibold">uh idk yet :) -tayler</span>
 		</div>
 	</Resizable.Pane>
-	<Resizable.Handle withHandle />
+	<!-- <Resizable.Handle withHandle /> -->
 	<!-- <Resizable.Pane defaultSize={30}>
 		<div class="flex h-full items-center justify-center p-6">
 			<span class="font-semibold">Token Viewer, with a text input on the top</span>
@@ -22,5 +22,5 @@
 	</Resizable.Pane> -->
 </Resizable.PaneGroup>
 
-<style lang="less">
+<style>
 </style>

@@ -5,5 +5,5 @@
 <h1>Whoops. My bad</h1>
 <p>{error.message}</p>
 
-<style lang="less">
+<style>
 </style>

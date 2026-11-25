@@ -28,7 +28,7 @@
 	</main>
 </Sidebar.Provider>
 
-<style lang="less">
+<style>
 	main {
 		flex-grow: 1;
 	}

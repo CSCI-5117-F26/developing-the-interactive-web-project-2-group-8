@@ -11,13 +11,6 @@ export default defineConfig( {
 		sourcemap: true
 	},
 	css: {
-		preprocessorOptions: {
-			less: {
-				math: 'always',
-				relativeUrls: true,
-				javascriptEnabled: true
-			}
-		}
 	},
 	plugins: [
 		tailwindcss(),

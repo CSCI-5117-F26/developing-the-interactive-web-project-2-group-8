@@ -44,7 +44,7 @@
 	<div id="blockly-editor"></div>
 </div>
 
-<style lang="less">
+<style>
 	@base: #f04615;
 
 	#blockly-editor {

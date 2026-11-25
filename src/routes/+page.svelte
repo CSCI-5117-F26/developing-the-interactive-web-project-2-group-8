@@ -61,18 +61,5 @@
 
 <!-- <Button>Click me</Button> -->
 
-<style lang="less">
-	// @import '#lib/Theme.less';
-	// :global {
-	// 	#app {
-	// 		display: flex;
-	// 		height: 100vh;
-	// 		width: 100vw;
-	// 		background-color: @bg;
-	// 	}
-	// 	body {
-	// 		margin: 0;
-	// 		padding: none;
-	// 	}
-	// }
+<style>
 </style>
