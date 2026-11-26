@@ -1,36 +1,36 @@
 <script lang="ts">
-	import * as Blockly from 'blockly';
+	// import * as Blockly from 'blockly/core';
 	// import { onMount } from 'svelte';
 
 	// import WorkspaceContainer from '#lib/components/WorkspaceContainer.svelte';
-	import { TokyoNightTheme, BlocklyEditor, Toolbox, Plugins } from '#lib/components/blockly';
+	// import { TokyoNightTheme, BlocklyEditor, Toolbox, Plugins } from '#lib/components/blockly';
 	// import { ToolPanel, ToolIcon, ToolTypes } from '#lib/components/toolBar';
 
 	import { Button } from '#lib/components/ui/button/index.js';
 
-	let options = {
-		trashcan: true,
-		toolbox: Toolbox,
-		plugins: Plugins,
-		theme: TokyoNightTheme
-	};
+	// let options = {
+	// 	trashcan: true,
+	// 	toolbox: Toolbox,
+	// 	plugins: Plugins,
+	// 	theme: TokyoNightTheme
+	// };
 
-	let workspace: Blockly.WorkspaceSvg;
+	// let workspace: Blockly.WorkspaceSvg;
 
-	let message = $state('Hello, World!');
+	// let message = $state('Hello, World!');
 
-	const startBlocks = {
-		blocks: {
-			blocks: [
-				{
-					kind: 'block',
-					type: 'regex_definition',
-					x: 10,
-					y: 10
-				}
-			]
-		}
-	};
+	// const startBlocks = {
+	// 	blocks: {
+	// 		blocks: [
+	// 			{
+	// 				kind: 'block',
+	// 				type: 'regex_definition',
+	// 				x: 10,
+	// 				y: 10
+	// 			}
+	// 		]
+	// 	}
+	// };
 
 	// onMount(() => {
 	// 	console.log(workspace);

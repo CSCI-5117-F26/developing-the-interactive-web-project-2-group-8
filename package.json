@@ -56,6 +56,7 @@
 	},
 	"dependencies": {
 		"@blockly/block-plus-minus": "^13.4.0",
+		"@blockly/continuous-toolbox": "^13.5.0",
 		"@blockly/plugin-scroll-options": "^13.4.0",
 		"@blockly/toolbox-search": "^13.4.0",
 		"@lucide/svelte": "^1.79.0",

@@ -1,6 +1,6 @@
 import tailwindcss from '@tailwindcss/vite';
-// import adapter from '@sveltejs/adapter-auto';
-import adapter from '@sveltejs/adapter-static';
+import adapter from '@sveltejs/adapter-auto';
+// import adapter from '@sveltejs/adapter-static';
 
 
 import postcssNesting from 'postcss-nesting';
@@ -15,7 +15,12 @@ import { defineConfig } from 'vite';
 
 export default defineConfig( {
 	build: {
-		sourcemap: true
+		sourcemap: true,
+		// commonjsOptions: { include: [] },
+
+	},
+	optimizeDeps: {
+		include: [ 'blockly/core', 'blockly/msg/en', '@blockly/continuous-toolbox' ]
 	},
 	css: {
 		postcss: {

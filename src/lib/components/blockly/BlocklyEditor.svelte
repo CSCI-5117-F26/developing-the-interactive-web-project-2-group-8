@@ -1,10 +1,9 @@
 <script lang="ts">
 	import * as Blockly from 'blockly';
 	import { onMount } from 'svelte';
-	import { on } from 'svelte/events';
-	import { regularExpressionGenerator } from './BlockGenerator';
-	// import { registerContinuousToolbox } from '@blockly/continuous-toolbox';
-	// registerContinuousToolbox();
+
+	import './Blocks';
+	// import { regularExpressionGenerator } from './BlockGenerator';
 
 	type BlocklyProps = {
 		options: Blockly.BlocklyOptions;
@@ -14,49 +13,39 @@
 	let { options, codeOutput = $bindable(), workspace = $bindable() }: BlocklyProps = $props();
 
 	onMount(() => {
-		workspace = Blockly.inject('blockly-editor', {
-			...options
-		});
+		let mounted = true;
+		let workspaceInstance: Blockly.WorkspaceSvg | undefined;
 
-		const runCode = () => {
-			const code = regularExpressionGenerator.workspaceToCode(workspace);
-			codeOutput = code;
+		const resizeWorkspace = () => {
+			if (workspaceInstance) {
+				Blockly.svgResize(workspaceInstance);
+			}
 		};
 
-		workspace.addChangeListener((e) => {
-			if (e.isUiEvent || e.type == Blockly.Events.FINISHED_LOADING || workspace.isDragging()) {
-				return;
-			}
-			runCode();
-		});
+		void (async () => {
+			const { registerContinuousToolbox } = await import('@blockly/continuous-toolbox');
+			if (!mounted) return;
 
-		const onresize = () => {};
-		window.addEventListener('resize', () => {
-			Blockly.svgResize(workspace);
-		});
+			registerContinuousToolbox();
+			workspace = Blockly.inject('blockly-editor', {
+				...options
+			});
+			workspaceInstance = workspace;
+			window.addEventListener('resize', resizeWorkspace);
+		})();
 
-		// workspace.addChangeListener
+		return () => {
+			mounted = false;
+			window.removeEventListener('resize', resizeWorkspace);
+			workspaceInstance?.dispose();
+		};
 	});
 </script>
 
 <!-- We are under the assumption that we are going to only be using one instance of the editor -->
-<div class="blockly-editor-container">
-	<div id="blockly-editor"></div>
+<div class="blockly-editor-container h-full">
+	<div id="blockly-editor" class="h-full"></div>
 </div>
 
 <style>
-	@base: #f04615;
-
-	#blockly-editor {
-		background-color: @base;
-		width: 100%;
-		height: 100%;
-		display: block;
-	}
-
-	.blockly-editor-container {
-		// width: 800px;
-		// height: 400px;
-		// display: flex;
-	}
 </style>
