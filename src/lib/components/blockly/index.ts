@@ -19,9 +19,9 @@ import { pluginInfo as FlagConnectionChecker } from './FlagConnectionChecker';
 // registerContinuousToolbox();
 const Plugins = {
   ...FlagConnectionChecker,
-  flyoutsVerticalToolbox: 'ContinuousFlyout',
-  metricsManager: 'ContinuousMetrics',
-  toolbox: 'ContinuousToolbox'
+  // flyoutsVerticalToolbox: 'ContinuousFlyout',
+  // metricsManager: 'ContinuousMetrics',
+  // toolbox: 'ContinuousToolbox'
 }
 
 export { TokyoNightTheme, BlocklyEditor, Toolbox, Plugins };

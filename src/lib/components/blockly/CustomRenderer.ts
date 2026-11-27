@@ -10,4 +10,4 @@ export class BlocklyRegexRenderer extends Blockly.thrasos.Renderer {
 
 
 
-Blockly.blockRendering.register( 'regex_renderer', BlocklyRegexRenderer );
+// Blockly.blockRendering.register( 'regex_renderer', BlocklyRegexRenderer );

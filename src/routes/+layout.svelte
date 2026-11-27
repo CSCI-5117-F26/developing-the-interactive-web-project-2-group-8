@@ -6,6 +6,7 @@
 	import * as Sidebar from '#lib/components/ui/sidebar/index.ts';
 	import AppSidebar from '#lib/components/app-sidebar.svelte';
 	import { onMount } from 'svelte';
+	import { Toaster } from '../lib/components/ui/sonner';
 
 	// import * as Tooltip from '#lib/components/ui/tooltip/index.ts';
 
@@ -20,7 +21,7 @@
 </svelte:head>
 
 <!-- {@render children()} -->
-
+<Toaster />
 <Sidebar.Provider open={false}>
 	<AppSidebar />
 	<main>

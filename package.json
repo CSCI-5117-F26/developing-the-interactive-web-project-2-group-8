@@ -59,7 +59,7 @@
 		"@blockly/continuous-toolbox": "^13.5.0",
 		"@blockly/plugin-scroll-options": "^13.4.0",
 		"@blockly/toolbox-search": "^13.4.0",
-		"@lucide/svelte": "^1.79.0",
+		"@lucide/svelte": "^1.82.0",
 		"@sveltejs/adapter-static": "^4.0.1",
 		"bits-ui": "^2.22.0",
 		"blockly": "^13.4.0"
