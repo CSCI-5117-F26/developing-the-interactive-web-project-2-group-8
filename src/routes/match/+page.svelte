@@ -2,7 +2,7 @@
 	import RegexBlockContainer from '#lib/components/RegexBlockContainer.svelte';
 	import * as Blockly from 'blockly';
 	import * as Resizable from '#lib/components/ui/resizable/index.ts';
-	import Separator from '#lib/components/ui/separator/separator.svelte';
+	import RegexTokenTextAreaContainer from '#lib/components/RegexTokenTextAreaContainer.svelte';
 
 	let { paneSize }: { paneSize: number } = $props();
 
@@ -19,9 +19,7 @@
 	</Resizable.Pane>
 	<Resizable.Handle />
 	<Resizable.Pane defaultSize={50}>
-		<div class="flex h-full items-center justify-center p-6">
-			<span class="font-semibold">Token Viewer</span>
-		</div>
+		<RegexTokenTextAreaContainer></RegexTokenTextAreaContainer>
 	</Resizable.Pane>
 </Resizable.PaneGroup>
 

@@ -24,6 +24,7 @@
 		toolbox: Toolbox,
 		plugins: Plugins,
 		theme: TokyoNightTheme,
+		// renderer: 'regex_renderer',
 		grid: {
 			colour: '#55587a',
 			spacing: 15,

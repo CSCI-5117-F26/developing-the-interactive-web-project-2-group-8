@@ -55,7 +55,17 @@ const thm = {
     // scrollbarOpacity: 0.4,
     // cursorColour: '#d0d0d0',
     // blackBackground: '#333',
+
+
+    markerColour: "#3d59a1",
+    selectedGlowColour: "#3d59a1",
+    selectedGlowOpacity: 0.8,
   },
+  fontStyle: {
+    family: "Noto Sans",
+    weight: "400",
+    size: 10
+  }
 };
 
 

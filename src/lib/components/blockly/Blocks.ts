@@ -9,7 +9,7 @@ import * as Blockly from 'blockly';
 // negation
 // character class
 
-// \X, \u, \q, \p, \c
+// \X, \u, \q, \p, \c backspace ????
 
 // disjunction
 // quantifier

@@ -5,12 +5,13 @@
 	import './Blocks';
 	import type { ClassValue } from 'svelte/elements';
 	import { regularExpressionGenerator } from './BlockGenerator';
+	import { BlocklyRegexRenderer } from './CustomRenderer';
 
 	type BlocklyProps = {
 		options: Blockly.BlocklyOptions;
 		codeOutput?: string;
 		workspace: Blockly.WorkspaceSvg;
-		class: ClassValue;
+		class?: ClassValue;
 	};
 	let {
 		options,
@@ -92,4 +93,7 @@
 </div>
 
 <style>
+	:global(.blocklyMainBackground) {
+		stroke: var(--color-border) !important;
+	}
 </style>

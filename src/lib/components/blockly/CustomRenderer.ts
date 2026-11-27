@@ -9,5 +9,10 @@ export class BlocklyRegexRenderer extends Blockly.thrasos.Renderer {
 }
 
 
+export const registrationType = Blockly.registry.Type.RENDERER;
+export const registrationName = 'regex_renderer';
 
-// Blockly.blockRendering.register( 'regex_renderer', BlocklyRegexRenderer );
+if ( !Blockly.registry.getObject( registrationType, registrationName ) ) {
+
+  Blockly.blockRendering.register( 'regex_renderer', BlocklyRegexRenderer );
+}

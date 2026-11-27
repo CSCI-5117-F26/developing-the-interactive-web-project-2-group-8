@@ -20,7 +20,8 @@ export default defineConfig( {
 
 	},
 	optimizeDeps: {
-		include: [ 'blockly/core', 'blockly/msg/en', '@blockly/continuous-toolbox' ]
+		include: [ 'blockly/core', 'blockly/msg/en', '@blockly/continuous-toolbox' ],
+		exclude: [ "svelte-codemirror-editor", "codemirror", "@codemirror/search", "@codemirror/view", "@codemirror/state" ],
 	},
 	css: {
 		postcss: {

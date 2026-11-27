@@ -17,6 +17,7 @@ import { pluginInfo as FlagConnectionChecker } from './FlagConnectionChecker';
 
 
 // registerContinuousToolbox();
+
 const Plugins = {
   ...FlagConnectionChecker,
   // flyoutsVerticalToolbox: 'ContinuousFlyout',
