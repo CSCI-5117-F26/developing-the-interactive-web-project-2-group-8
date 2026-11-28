@@ -1,0 +1,45 @@
+<xml id="toolbox" style="display: none">
+	<category name="Atoms" categorystyle="atom_category">
+		<block type="atom_literal"></block>
+		<block type="atom_capturing_group"></block>
+		<block type="atom_named_capturing_group"></block>
+		<block type="atom_non_capturing_group"></block>
+		<block type="atom_backreference"></block>
+		<block type="atom_named_backreference"></block>
+		<block type="quantifier_range"></block>
+	</category>
+	<category name="Assertions" categorystyle="assertion_category">
+		<block type="assertion_start"></block>
+		<block type="assertion_end"></block>
+		<block type="assertion_lookahead"></block>
+		<block type="assertion_lookbehind"></block>
+		<block type="assertion_word_boundary"></block>
+	</category>
+	<category name="Characters" categorystyle="character_category">
+		<block type="atom_digit"></block>
+		<block type="atom_word"></block>
+		<block type="atom_whitespace"></block>
+		<block type="atom_wildcard"></block>
+		<block type="character_form_feed"></block>
+		<block type="character_new_line"></block>
+		<block type="character_carriage_return"></block>
+		<block type="character_tab"></block>
+		<block type="character_line_tab"></block>
+		<block type="character_null"></block>
+		<block type="character_control"></block>
+		<block type="atom_whitespace"></block>
+		<block type="atom_whitespace"></block>
+		<block type="atom_whitespace"></block>
+
+	</category>
+	<category name="Flags" categorystyle="flags_category">
+		<block type="flag_generate_indices"></block>
+		<block type="flag_global"></block>
+		<block type="flag_case_insensitive"></block>
+		<block type="flag_multiline"></block>
+		<block type="flag_wildcard_all"></block>
+		<block type="flag_unicode"></block>
+		<block type="flag_modern_unicode"></block>
+		<block type="flag_sticky"></block>
+	</category>
+</xml>

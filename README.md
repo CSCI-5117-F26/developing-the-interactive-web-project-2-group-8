@@ -1,70 +1,60 @@
-# Module 2 Group Assignment
+# Mockups
 
-CSCI 5117, Fall 2026, [assignment description](https://canvas.umn.edu/courses/579310/pages/project-2)
+[https://docs.google.com/presentation/d/1ct48P6TKdvqzulLo29bgrOCmktOccNv2uHT9fpPA4EY/edit?usp=sharing](https://docs.google.com/presentation/d/1ct48P6TKdvqzulLo29bgrOCmktOccNv2uHT9fpPA4EY/edit?usp=sharing)
 
-## App Info:
+# sv
 
-* Team Name: TODO
-* App Name: TODO
-* App Link: <https://TODO.com/>
+Everything you need to build a Svelte project, powered by [`sv`](https://github.com/sveltejs/cli).
 
-### Students
+## Creating a project
 
-* First Last, x500@umn.edu
-* ...
+If you're seeing this, you've probably already done this step. Congrats!
 
+```sh
+# create a new project
+npx sv create my-app
+```
 
-## Key Features
+To recreate this project with the same configuration:
 
-**Describe the most challenging features you implemented
-(one sentence per bullet, maximum 4 bullets):**
+```sh
+# recreate this project
+npx sv@1.3.0 create --template minimal --types ts --add prettier eslint --install npm ./
+```
 
-* ...
+## Adding features
 
-Which (if any) device integration(s) does your app support?
+Add features to your project with `sv add`:
 
-* ...
+```sh
+npx sv add
+```
 
-Which (if any) progressive web app feature(s) does your app support?
+For example, to add Tailwind CSS:
 
-* ...
+```sh
+npx sv add tailwindcss
+```
 
+## Developing
 
+Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
 
-## Mockup images
+```sh
+npm run dev
 
-**[Add images/photos that show your mockup](https://stackoverflow.com/questions/10189356/how-to-add-screenshot-to-readmes-in-github-repository) along with a very brief caption:**
+# or start the server and open the app in a new browser tab
+npm run dev -- --open
+```
 
-![](https://media.giphy.com/media/26ufnwz3wDUli7GU0/giphy.gif)
+## Building
 
+To create a production version of your app:
 
-## Testing Notes
+```sh
+npm run build
+```
 
-**Is there anything special we need to know in order to effectively test your app? (optional):**
+You can preview the production build with `npm run preview`.
 
-* ...
-
-
-
-## Screenshots of Site (complete)
-
-**[Add a screenshot of each key page](https://stackoverflow.com/questions/10189356/how-to-add-screenshot-to-readmes-in-github-repository)
-along with a very brief caption:**
-
-![](https://media.giphy.com/media/o0vwzuFwCGAFO/giphy.gif)
-
-
-
-## External Dependencies
-
-**Document integrations with 3rd Party code or services here.
-Please do not document required libraries (e.g., VUE, Firebase, vuefire).**
-
-* Library or service name: description of use
-* ...
-
-**If there's anything else you would like to disclose about how your project
-relied on external code, expertise, or anything else, please disclose that
-here:**
-
-...
+> To deploy your app, you may need to install an [adapter](https://svelte.dev/docs/kit/adapters) for your target environment.
