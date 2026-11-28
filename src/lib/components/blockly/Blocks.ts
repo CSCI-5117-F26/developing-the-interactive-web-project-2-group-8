@@ -51,8 +51,8 @@ Blockly.Blocks[ "atom_literal" ] = {
       // .setCheck( 'String' )
       .appendField( new Blockly.FieldLabelSerializable( 'Literal' ), 'name' )
       .appendField( new Blockly.FieldTextInput( 'hello, world!' ), 'v' );
-    this.setPreviousStatement( true, null );
-    this.setNextStatement( true, null );
+    this.setPreviousStatement( true, 'Atom' );
+    this.setNextStatement( true, 'Atom' );
     this.setTooltip( 'Matches a string, automatically escaping problematic characters' );
     this.setHelpUrl( '' );
     this.setColour( 225 );

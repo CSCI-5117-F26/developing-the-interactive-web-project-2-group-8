@@ -41,7 +41,7 @@ function CreateEOLDecorations ( view: EditorView ): DecorationSet {
   for ( const lineNumber of [ ...visibleLines ].sort( ( a, b ) => a - b ) ) {
     if ( lineNumber < doc.lines ) {
       decorations.push(
-        Decoration.widget( { widget: eolWidget, side: -1 } ).range( doc.line( lineNumber ).to )
+        Decoration.widget( { widget: eolWidget, side: 1 } ).range( doc.line( lineNumber ).to )
       );
     }
   }

@@ -23,7 +23,7 @@
 	--secondary-foreground: oklch(0.205 0 0);
 	--muted: #29355a;
 	--muted-foreground: oklch(0.556 0 0);
-	--accent: oklch(0.97 0 0);
+	--accent: #20212a;
 	--accent-foreground: oklch(0.205 0 0);
 	--destructive: oklch(0.577 0.245 27.325);
 	--border: #545c7e33;
